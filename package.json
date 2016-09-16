@@ -1,0 +1,14 @@
+{
+  "name": "docker-node-minimal",
+  "version": "1.0.0",
+  "description": "Minimal Node-Docker Image",
+  "main": "app/index.js",
+  "private": true,
+  "scripts": {
+  	"start": "node app/index",
+  	"build": "docker build -t plusinnovations/node_minimal .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "plusinnovations <hildebrandt@plus-innovations.com> (http://www.plus-innovations.com)",
+  "license": "MIT"
+}
