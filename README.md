@@ -6,7 +6,10 @@ This image is based on Michael Hart's [(mhart)][mhart-url] great [mhart/alpine-n
 
 ## Main Purpose
 
-The official [Docker][docker-url] [node][nodejs-url] image is about 650MB - which is quite huge. Michael Hart did a really great job to minimize the overhead of an node image down to 50 MB. His image is based on [Alpine Linux][alpine-url]. I just added a few things, i needed for my base images (git for some npm dependencies) and here is the result:
+The official [Docker][docker-url] [node][nodejs-url] image is about 650MB - which is quite huge. 
+Michael Hart did a really great job to minimize the overhead of an node image down to 50 MB. 
+His image is based on [Alpine Linux][alpine-url]. I just added a few things, i needed for my base images 
+(git for some npm dependencies) and here is the result:
 
 ```
 REPOSITORY                     TAG         SIZE
@@ -15,15 +18,18 @@ mhart/alpine-node              latest      49.41 MB
 node                           latest      652.8 MB
 ```
 
+
 ## Usage
+
+In the [Dockerfile][dockerfile-url] and [package.json][package-url], you find code to improve the image build process: 
+ 
+### Your app
+
+Place your source code in the ./app directory. Starting point is ./app/index.js. If you have a different starting point, just modify it in your [package.json][package-url] ("start" script and "main")
 
 ### Dockerfile
 
 Please feel free to modify the [Dockerfile][dockerfile-url]: here you can enable/disable installation of additional built tools in case that you have native dependencies (line 5 and 6).
-
-### Your app
-
-Place your source code in the ./app directory. Starting point is ./app/index.js. If you have a different starting point, just modify it in your [package.json][package-url] (start script and "main")
 
 ### Building Your Image
 
@@ -104,7 +110,7 @@ All other trademarks are the property of their respective owners.
 [mhart-url]: https://github.com/mhart
 [alpine-url]: https://alpinelinux.org
 
-[license-url]: https://github.com/sebhildebrandt/docker-node-image/blob/master/LICENSE
+[license-url]: https://github.com/sebhildebrandt/docker-node-minimal/blob/master/LICENSE
 [license-img]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
-[dockerfile-url]: https://github.com/sebhildebrandt/docker-node-image/blob/master/Dockerfile
-[package-url]: https://github.com/sebhildebrandt/docker-node-image/blob/master/package.json
+[dockerfile-url]: https://github.com/sebhildebrandt/docker-node-minimal/blob/master/Dockerfile
+[package-url]: https://github.com/sebhildebrandt/docker-node-minimal/blob/master/package.json
