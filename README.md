@@ -36,7 +36,7 @@ Please feel free to modify the [Dockerfile][dockerfile-url]: here you can enable
 Start building your image with
 
 ```
-npm run built
+npm run build
 ```
 
 If you want your own image name, just modify the [package.json][package-url] built script (line 9) like so:
